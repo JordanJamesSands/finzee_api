@@ -1,0 +1,5 @@
+notes
+
+$env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\jsands\Documents\repos\hack_to_the_future\.secrets\taxy-298609-506d38f34569.json"
+
+gcloud app deploy

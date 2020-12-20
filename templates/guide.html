@@ -7,17 +7,27 @@
 
 
 <h4>https://taxy-298609.ts.r.appspot.com/get_trans </h4>
+    <b>GET Request Only</b><br><br>
     Returns a transaction's information given the transaction_id <br>
-    <b>example:</b> https://taxy-298609.ts.r.appspot.com/get_trans?transaction_id=0117656a0ab05q0V
+    <b>example:</b> https://taxy-298609.ts.r.appspot.com/get_trans?transaction_id=0117656a0ab05q0V<br>
 
-<br><br>
+<br>
 
 <h4>https://taxy-298609.ts.r.appspot.com/get_trans_in_date</h4>
+    <b>GET Request Only</b><br><br>
     Returns all transactions' information in a given date range.<br><br>
     Date format is YYYY-MM-DD.<br><br>
     <b>example:</b>https://taxy-298609.ts.r.appspot.com/get_trans_in_date?start=2019-12-1&end=2021-12-20<br><br>
     alternatively, omit the dates to return all data<br><br>
     <b>example:</b>https://taxy-298609.ts.r.appspot.com/get_trans_in_date<br>
+
+<br>
+
+<h4>https://taxy-298609.ts.r.appspot.com/update</h4>
+    <b>POST Request Only</b><br><br>
+    Allows updating a transaction record<br>
+    Payload must be json and must contain a transaction_id field.<br>
+
 
 
 

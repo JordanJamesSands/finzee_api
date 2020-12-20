@@ -85,7 +85,18 @@ class Guide(Resource):
     def get(self):
         return make_response(render_template('guide.html') , 200 , {'Content-Type':'text/html'})
 
+class update(Resource):
+    def post(self):
+        update_data = request.get_json(force=True)
+        db = firestore.Client()
+        #update_data = args.get('update_data',{})
+        transaction_id = update_data.get('transaction_id',None)
 
+        transactions = db.collection('users').document('FVj70UDoOThQPsHFTekT').collection('accounts').document('ayLtL7MTTHbdXUjK9wWZ').collection('transactions')
+        transactions.document(transaction_id).update(update_data)   
+        
+        
+api.add_resource(update,'/update')
 api.add_resource(getTransactions, '/get_trans')
 api.add_resource(getTransactionsInDate,'/get_trans_in_date')
 api.add_resource(Guide,'/')
